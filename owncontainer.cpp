@@ -11,21 +11,21 @@ OwnContainer::OwnContainer(std::initializer_list<int> values) :
 
 OwnContainer::iterator OwnContainer::begin()
 {
-    return OwnIterator<int>(data.get());
+    return iterator(data.get());
 }
 
 OwnContainer::iterator OwnContainer::end()
 {
-    return OwnIterator<int>(data.get() + size);
+    return iterator(data.get() + size);
 }
 
 OwnContainer::const_iterator OwnContainer::begin() const
 {
-    return OwnIterator<const int>(data.get());
+    return const_iterator(data.get());
 }
 
 OwnContainer::const_iterator OwnContainer::end() const
 {
-    return OwnIterator<const int>(data.get() + size);
+    return const_iterator(data.get() + size);
 }
 
