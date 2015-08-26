@@ -8,9 +8,19 @@
 class OwnContainer
 {
 public:
-    OwnContainer(std::initializer_list<unsigned int> values);
+    typedef OwnIterator<int> iterator;
+    typedef OwnIterator<const int> const_iterator;
+
+    OwnContainer(std::initializer_list<int> values);
+
+    iterator begin();
+    iterator end();
+
+    const_iterator begin() const;
+    const_iterator end() const;
 private:
-    std::unique_ptr<unsigned int[]> data;
+    const size_t size;
+    std::unique_ptr<int[]> data;
 };
 
 #endif // OWNCONTAINER_H

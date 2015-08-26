@@ -16,8 +16,7 @@ TEMPLATE = app
 
 
 SOURCES += tst_owniteratortest.cpp \
-    owncontainer.cpp \
-    owniterator.cpp
+    owncontainer.cpp
 DEFINES += SRCDIR=\\\"$$PWD/\\\"
 
 HEADERS += \
@@ -25,3 +24,5 @@ HEADERS += \
     owniterator.h
 
 QMAKE_CXXFLAGS += --std=c++11
+
+INCLUDEPATH += $$(BOOST)
