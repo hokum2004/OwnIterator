@@ -17,7 +17,7 @@ public:
 
     bool operator!=(OwnIterator const& other) const;
     bool operator==(OwnIterator const& other) const; //need for BOOST_FOREACH
-    ValueType& operator*() const;
+    typename OwnIterator::reference operator*() const;
     OwnIterator& operator++();
 private:
     ValueType* p;
@@ -50,7 +50,7 @@ bool OwnIterator<ValueType>::operator==(OwnIterator const& other) const
 }
 
 template<typename ValueType>
-ValueType &OwnIterator<ValueType>::operator*() const
+typename OwnIterator<ValueType>::reference OwnIterator<ValueType>::operator*() const
 {
     return *p;
 }

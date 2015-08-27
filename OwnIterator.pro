@@ -16,12 +16,15 @@ TEMPLATE = app
 
 
 SOURCES += tst_owniteratortest.cpp \
-    owncontainer.cpp
+    owncontainer.cpp \
+    owncontainerbbi.cpp
 DEFINES += SRCDIR=\\\"$$PWD/\\\"
 
 HEADERS += \
     owncontainer.h \
-    owniterator.h
+    owniterator.h \
+    owncontainerbbi.h \
+    owniteratorbb.h
 
 QMAKE_CXXFLAGS += --std=c++11
 
